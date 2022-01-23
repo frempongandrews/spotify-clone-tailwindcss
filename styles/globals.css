@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import url("http://fonts.cdnfonts.com/css/proxima-nova-condensed"); */
+
+:root {
+  --spotify-green: #1db954;
+  --spotify-dark: #121212;
+  --spotify-darkest: #191414;
+  --spotify-light: #282828;
+  --spotify-lightest: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 768px;
+}
+
+/* always show scrollbar*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  width: 8px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-track {
+  /* background: red; */
+}
