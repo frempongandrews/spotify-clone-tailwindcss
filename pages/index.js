@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   AiFillHome,
   AiOutlineHome,
@@ -10,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { MdHomeFilled } from "react-icons/md";
 import { BiLibrary } from "react-icons/bi";
-
+import Home from "../components/Home";
 const SpotifyIcon = () => {
   return (
     <svg className="spotify-logo--text h-[40px]" viewBox="0 0 1134 340">
@@ -129,7 +128,7 @@ const sidebarNav = {
   ],
 };
 
-export default function Home() {
+export default function HomePage() {
   const [selectedSidebarNavItem, setSelectedSidebarNavItem] = useState("Home");
 
   const renderTopSidebarNav = () => {
@@ -304,8 +303,7 @@ export default function Home() {
         </aside>
 
         <section className="bg-green-300 flex-1">
-          <header>header in main content</header>
-          main content
+          <Home />
         </section>
       </div>
       {/* End inner container: sidebar + content */}
