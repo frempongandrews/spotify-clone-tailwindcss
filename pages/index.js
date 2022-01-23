@@ -130,6 +130,7 @@ const sidebarNav = {
 
 export default function HomePage() {
   const [selectedSidebarNavItem, setSelectedSidebarNavItem] = useState("Home");
+  const [selectedSidebarPlaylist, setSelectedSidebarPlaylist] = useState("");
 
   const renderTopSidebarNav = () => {
     return sidebarNav.topNav.map((navItem) => {
@@ -261,8 +262,11 @@ export default function HomePage() {
     return sidebarNav.playlists.map((p) => {
       return (
         <li
-          className="py-[5px] hover:text-white cursor-default px-8"
+          className={`py-[5px] hover:text-white cursor-default px-8 ${
+            selectedSidebarPlaylist === p.title ? "text-white" : "text-white/75"
+          }`}
           key={p.id}
+          onClick={() => onSelectSidebarPlaylist(p)}
         >
           {p.title}
         </li>
@@ -274,8 +278,13 @@ export default function HomePage() {
     setSelectedSidebarNavItem(navItem.name);
   };
 
+  const onSelectSidebarPlaylist = (playlistItem) => {
+    setSelectedSidebarNavItem("");
+    setSelectedSidebarPlaylist(playlistItem.title);
+  };
+
   return (
-    <div>
+    <div className="flex flex-col flex-1">
       {/*inner container: sidebar + content */}
       <div className="flex h-[calc(100vh-100px)]">
         <aside className="bg-black w-[232px] flex-none text-white pt-6 pb-3">
@@ -294,12 +303,12 @@ export default function HomePage() {
           <ul className="border-t-[1px] border-gray-700 mt-[60px] pt-[15px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-545px)]">
             {renderSidebarNavPlaylists()}
           </ul>
-          <div className="flex items-center mt-[25px] cursor-pointer text-white/75 hover:text-white px-8">
-            <span className="w-[20px] h-[20px] flex items-center justify-center mr-4 rounded-full border-[1px] border-gray-300">
+          <button className="flex items-center mt-[25px] cursor-pointer text-white/75 hover:text-white px-8">
+            <span className="w-[20px] h-[20px] flex items-center justify-center mr-4 rounded-full border-[1px] border-gray-300 ">
               <AiOutlineArrowDown />
             </span>
             <p className="text-sm">Install App</p>
-          </div>
+          </button>
         </aside>
 
         <section className="bg-green-300 flex-1">
