@@ -47,7 +47,7 @@ const Home = () => {
         <div>
           <h1>Good morning: {JSON.stringify(size, null, 3)}</h1>
           {/*playlists container */}
-          <div className="flex overflow-hidden h-[200px] flec-col md:flex-row flex-wrap">
+          <div className="flex overflow-hidden h-[200px] md:flex-row flex-wrap">
             {/* playlist item */}
             <div
               className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
