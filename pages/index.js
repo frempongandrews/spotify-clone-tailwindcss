@@ -335,6 +335,7 @@ export default function HomePage() {
     <div className="flex flex-col flex-1">
       {/*inner container: sidebar + content */}
       <div className="flex h-[calc(100vh-100px)]">
+        {/*sidebar */}
         <aside className="bg-black w-[232px] flex-none text-white pt-6 pb-3">
           <nav className="h-[300px]">
             <div className="px-8">
@@ -358,8 +359,9 @@ export default function HomePage() {
             <p className="text-sm">Install App</p>
           </button>
         </aside>
+        {/*End sidebar */}
 
-        <section className="bg-green-300 flex-1">
+        <section className="bg-green-300 flex-1 border-2 overscroll-scroll">
           <Home />
         </section>
       </div>

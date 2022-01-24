@@ -13,6 +13,7 @@ module.exports = {
         "spotify-darkest": "#191414",
         "spotify-light": "#282828",
         "spotify-lightest": "#B3B3B3",
+        "spotify-black": "#181818",
       },
     },
 
@@ -23,10 +24,10 @@ module.exports = {
       // // => @media (min-width: 576px) { ... }
       sm: "576px",
       // // => @media (min-width: 768px) { ... }
-      // md: "768px",
+      md: "768px",
       lg: "992px",
       xl: "1200px",
-      "2xl": "1200px",
+      "2xl": "1400px",
     },
     fontFamily: {
       proximaNova: ["Proxima Nova", "sans serif"],
