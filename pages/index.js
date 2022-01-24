@@ -50,6 +50,22 @@ const sidebarNav = {
       title: "mornings",
     },
     {
+      id: "30",
+      title: "Funny stuff",
+    },
+    {
+      id: "31",
+      title: "Best funny stuff",
+    },
+    {
+      id: "32",
+      title: "Starred",
+    },
+    {
+      id: "33",
+      title: "African Heat",
+    },
+    {
       id: "2",
       title: "great stuff",
     },
@@ -124,6 +140,38 @@ const sidebarNav = {
     {
       id: "20",
       title: "best Dj Khaled",
+    },
+    {
+      id: "21",
+      title: "best Dance",
+    },
+    {
+      id: "22",
+      title: "Ghana hiplife",
+    },
+    {
+      id: "23",
+      title: "Dances",
+    },
+    {
+      id: "24",
+      title: "Hip Hop Hits",
+    },
+    {
+      id: "25",
+      title: "Italian rap",
+    },
+    {
+      id: "26",
+      title: "Top 50 Global",
+    },
+    {
+      id: "27",
+      title: "Billboard hot 100",
+    },
+    {
+      id: "28",
+      title: "UK top 50",
     },
   ],
 };

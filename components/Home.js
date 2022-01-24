@@ -3,25 +3,72 @@ import { VscAccount } from "react-icons/vsc";
 import { AiFillCaretDown, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import useWindowSize from "../hooks/useWindowSize";
 
+const content = {
+  yourPlaylists: [
+    {
+      title: "#64 Always In Process",
+      img: "/images/nkki.jpeg",
+    },
+    {
+      title: "Mornings",
+      img: "/images/mornings.jpeg",
+    },
+    {
+      title: "best hip hop 2013",
+      img: "/images/best-hip-hop.jpeg",
+    },
+    {
+      title: "Ep 59: Gin Gimlets",
+      img: "/images/we-might-be-drunk.jpeg",
+    },
+    {
+      title: "bachata",
+      img: "/images/bachata.jpeg",
+    },
+  ],
+
+  yourShows: [],
+
+  recentlyPlayed: [],
+};
+
 const Home = () => {
   const size = useWindowSize();
+  const renderYourPlaylists = () => {
+    return content.yourPlaylists.map((p) => {
+      return (
+        <div
+          className="flex items-center h-[80px] w-[95%]  bg-white/[.1] hover:bg-white/[.2] transition ease-in-out 
+          md:w-[45%] lg:w-[47%] xl:w-[31%] cursor-pointer rounded-lg"
+          key={p.title}
+        >
+          <div className="w-[80px]">
+            <img src={p.img} className="rounded-l-lg" width="100%" />
+          </div>
+          <div className="flex items-center p-[20px] text-white font-bold">
+            <p>{p.title}</p>
+          </div>
+        </div>
+      );
+    });
+  };
   return (
-    <div className="py-[10px] px-[20px]">
+    <div className="py-[20px] px-[20px] bg-spotify-darkest min-h-[100vh]">
       {/* header and sub header container */}
-      <div className="bg-red-300">
+      <div className="">
         <header className="flex items-center">
           <div className="flex flex-1">
             <button className="flex items-center justify-center text-white bg-spotify-light w-[35px] h-[35px] rounded-full mr-[20px]">
               <AiOutlineLeft />
             </button>
-            <button className="flex items-center justify-center text-white bg-spotify-light/80 w-[35px] h-[35px] rounded-full cursor-not-allowed">
+            <button className="flex items-center justify-center text-white bg-spotify-light/75 w-[35px] h-[35px] rounded-full cursor-not-allowed">
               <AiOutlineRight />
             </button>
           </div>
           <div className="flex items-center">
             <button
               className="mr-[40px] py-[5px]
-            px-[40px] border-[2px] border-red-300 
+            px-[40px] border-[1px] border-white 
             rounded-full uppercase text-sm text-bold 
             text-white bg-spotify-light"
             >
@@ -44,59 +91,13 @@ const Home = () => {
           </div>
         </header>
         {/* sub header*/}
-        <div>
-          <h1>Good morning: {JSON.stringify(size, null, 3)}</h1>
+        <div className="">
+          <h1 className="mt-[40px] text-white text-3xl font-bold">
+            Good morning: {JSON.stringify(size, null, 3)}
+          </h1>
           {/*playlists container */}
-          <div className="flex overflow-hidden h-[200px] md:flex-row flex-wrap">
-            {/* playlist item */}
-            <div
-              className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
-            md:w-[45%] lg:w-[47%] md:mr-[20px] xl:w-[31%] mb-[20px]"
-            >
-              <div>image</div>
-              <div className="flex items-center">details</div>
-            </div>
-            {/* End playlist item */}
-
-            {/* playlist item */}
-            <div
-              className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
-            md:w-[45%] lg:w-[47%] md:mr-[20px] xl:w-[31%] mb-[20px]"
-            >
-              <div>image</div>
-              <div className="flex items-center">details</div>
-            </div>
-            {/* End playlist item */}
-
-            {/* playlist item */}
-            <div
-              className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
-            md:w-[45%] lg:w-[47%] md:mr-[20px] xl:w-[31%] mb-[20px]"
-            >
-              <div>image</div>
-              <div className="flex items-center">details</div>
-            </div>
-            {/* End playlist item */}
-
-            {/* playlist item */}
-            <div
-              className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
-            md:w-[45%] lg:w-[47%] md:mr-[20px] xl:w-[31%] mb-[20px]"
-            >
-              <div>image</div>
-              <div className="flex items-center">details</div>
-            </div>
-            {/* End playlist item */}
-
-            {/* playlist item */}
-            <div
-              className="flex items-center h-[80px] bg-yellow-300 w-[95%] 
-            md:w-[45%] lg:w-[47%] md:mr-[20px] xl:w-[31%] mb-[20px]"
-            >
-              <div>image</div>
-              <div className="flex items-center">details</div>
-            </div>
-            {/* End playlist item */}
+          <div className="flex overflow-hidden h-[200px] md:flex-row flex-wrap gap-[20px] mt-[20px]">
+            {renderYourPlaylists()}
           </div>
           {/* End playlists container */}
         </div>
