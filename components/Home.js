@@ -105,7 +105,7 @@ const Home = () => {
       return (
         <div
           className="flex items-center h-[80px] bg-white/[.1] hover:bg-white/[.2] transition ease-in-out 
-          w-[98%] md:w-[45%] lg:w-[47%] xl:w-[31%] 2xl:w-[23%] cursor-pointer rounded-lg"
+          w-[98%] md:w-[46%] lg:w-[47%] xl:w-[31%] 2xl:w-[23%] cursor-pointer rounded-lg"
           key={p.title}
           onMouseEnter={() => onHoveredPlaylist(p)}
           onMouseLeave={() => onLeaveHoveredPlaylist(p)}
@@ -125,7 +125,7 @@ const Home = () => {
     return content.yourShows.map((s) => {
       return (
         <div
-          className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+          className="xs:min-w-[180px] max-w-[300px] md:min-w-[200px] lg:max-w-[320px]
           flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
           border-spotify-black rounded-lg"
           key={s.title}
@@ -216,10 +216,32 @@ const Home = () => {
       <div className="bg-spotify-dark z-10 overflow-auto p-[20px]">
         {/* inner content */}
         <div>
-          <div className="flex mb-[20px]">
+          <div className="flex mt-[-10px]">
             <h1 className="flex-1 text-white text-2xl">
               <a href="#" className="hover:underline">
                 Your shows
+              </a>
+            </h1>
+            <h3 className="text-white/75 text-xs uppercase">
+              <a href="#" className="hover:underline">
+                See all
+              </a>
+            </h3>
+          </div>
+
+          {/*list */}
+          <div className="flex gap-[20px] flex-wrap !overflow-hidden min-h-[350px] max-h-[360px]">
+            {renderYourShows()}
+          </div>
+        </div>
+        {/* End inner content */}
+
+        {/* inner content */}
+        <div>
+          <div className="flex mt-[-10px]">
+            <h1 className="flex-1 text-white text-2xl">
+              <a href="#" className="hover:underline">
+                Recently played
               </a>
             </h1>
             <h3 className="text-white/75 text-xs uppercase">
