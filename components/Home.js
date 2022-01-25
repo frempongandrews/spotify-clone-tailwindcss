@@ -135,7 +135,10 @@ const Home = () => {
             </header>
             {/* sub header*/}
             <div className="">
-              <h1 className="mt-[40px] text-white text-3xl font-bold">
+              <h1 className="mt-[40px] text-white text-3xl font-bold relative">
+                <h2 className="absolute right-[0%]">
+                  {JSON.stringify(size, null, 3)}
+                </h2>
                 Good morning:
               </h1>
               {/*playlists container */}
@@ -169,10 +172,10 @@ const Home = () => {
           </div>
 
           {/*list */}
-          <div className="flex gap-[20px] flex-wrap !overflow-hidden xs:h-[380px] lg:h-[340px] 2xl:h-[360px]">
+          <div className="flex gap-[20px] flex-wrap !overflow-hidden min-h-[350px] max-h-[360px]">
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -192,7 +195,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -212,7 +215,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -232,7 +235,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -252,46 +255,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
-            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
-            border-spotify-black rounded-lg"
-            >
-              <div className=" p-4">
-                <div className="w-[100%] flex justify-center">
-                  <img src="/images/nkki.jpeg" className="rounded-xl" />
-                </div>
-                <div className="text-white">
-                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
-                  <p className="text-white/60 leading-tight text-sm">
-                    Big Money Players Network and...
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*end list item */}
-          </div>
-          {/*end list */}
-        </div>
-
-        <div>
-          <div className="flex mb-[20px]">
-            <h1 className="flex-1 text-white text-2xl">
-              <a href="#" className="hover:underline">
-                Your shows
-              </a>
-            </h1>
-            <h3 className="text-white/75 text-xs uppercase">
-              <a href="#" className="hover:underline">
-                See all
-              </a>
-            </h3>
-          </div>
-
-          {/*list */}
-          <div className="flex gap-[20px] flex-wrap !overflow-hidden h-[400px]">
-            {/*list item */}
-            <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -311,7 +275,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -331,7 +295,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -351,7 +315,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -371,7 +335,27 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -407,10 +391,30 @@ const Home = () => {
           </div>
 
           {/*list */}
-          <div className="flex gap-[20px] flex-wrap !overflow-hidden h-[400px]">
+          <div className="flex gap-[20px] flex-wrap !overflow-hidden min-h-[350px] max-h-[360px]">
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl " />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -430,7 +434,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -450,7 +454,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -470,7 +474,7 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
@@ -490,7 +494,306 @@ const Home = () => {
 
             {/*list item */}
             <div
-              className="xs:w-[47%] lg:w-[31%] xl:w-[23%] 2xl:w-[15%] min-w-[210px] max-w-[338px] 
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+          </div>
+          {/*end list */}
+        </div>
+
+        <div>
+          <div className="flex mb-[20px]">
+            <h1 className="flex-1 text-white text-2xl">
+              <a href="#" className="hover:underline">
+                Your shows
+              </a>
+            </h1>
+            <h3 className="text-white/75 text-xs uppercase">
+              <a href="#" className="hover:underline">
+                See all
+              </a>
+            </h3>
+          </div>
+
+          {/*list */}
+          <div className="flex gap-[20px] flex-wrap !overflow-hidden min-h-[350px] max-h-[360px]">
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl " />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
+            flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
+            border-spotify-black rounded-lg"
+            >
+              <div className=" p-4">
+                <div className="w-[100%] flex justify-center">
+                  <img src="/images/nkki.jpeg" className="rounded-xl" />
+                </div>
+                <div className="text-white">
+                  <p className="mt-[14px] mb-[4px]">The Nikki Glaser Podcast</p>
+                  <p className="text-white/60 leading-tight text-sm">
+                    Big Money Players Network and...
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*end list item */}
+
+            {/*list item */}
+            <div
+              className="xs:min-w-[210px] max-w-[300px] md:min-w-[230px] lg:max-w-[320px]
             flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
             border-spotify-black rounded-lg"
             >
