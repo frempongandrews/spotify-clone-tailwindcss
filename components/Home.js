@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { VscAccount } from "react-icons/vsc";
 import { AiFillCaretDown, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { FiExternalLink } from "react-icons/fi";
 import useWindowSize from "../hooks/useWindowSize";
 
 const content = {
@@ -83,15 +84,14 @@ const content = {
   recentlyPlayed: [],
 };
 
-// Todo: Add bg colors to plylist object
+// TODO: transition gradient on hover playlist
 const Home = () => {
   const size = useWindowSize();
   const [hoveredPlaylist, setHoveredPlaylist] = useState(
     content.yourPlaylists[0] || null
   );
-  useEffect(() => {
-    console.log("********hoveredPlaylist", hoveredPlaylist);
-  });
+
+  const [isAccountDropdownOpened, toggleAccountDropdown] = useState(false);
 
   const onHoveredPlaylist = (playlist) => {
     setHoveredPlaylist(playlist);
@@ -165,7 +165,9 @@ const Home = () => {
                   <AiOutlineRight />
                 </button>
               </div>
-              <div className="flex items-center">
+
+              {/* account btns container */}
+              <div className="flex items-center relative">
                 <button
                   className="mr-[40px] py-[8px]
             px-[35px] border-[1px] border-white 
@@ -188,7 +190,34 @@ const Home = () => {
                     <AiFillCaretDown />
                   </span>
                 </button>
+                {/* account dropdown */}
+                <div className="absolute right-0 top-[42px] bg-spotify-medium-gray z-50 w-[200px] text-white/75 p-[5px] rounded-md">
+                  <ul className="text-[0.87em]">
+                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
+                      <span className="flex-1">Account</span>
+                      <span className="text-[1.2em]">
+                        {" "}
+                        <FiExternalLink />
+                      </span>
+                    </li>
+                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
+                      <span>Profile</span>
+                    </li>
+                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
+                      <span className="flex-1">Upgrade to Premium</span>
+                      <span className="text-[1.2em]">
+                        {" "}
+                        <FiExternalLink />
+                      </span>
+                    </li>
+                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
+                      <span>Log out</span>
+                    </li>
+                  </ul>
+                </div>
+                {/* End account dropdown */}
               </div>
+              {/* End account btns container */}
             </header>
             {/* sub header*/}
             <div className="">
