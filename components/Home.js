@@ -167,10 +167,10 @@ const Home = () => {
               </div>
               <div className="flex items-center">
                 <button
-                  className="mr-[40px] py-[5px]
-            px-[40px] border-[1px] border-white 
-            rounded-full uppercase text-sm text-bold 
-            text-white bg-spotify-light"
+                  className="mr-[40px] py-[8px]
+            px-[35px] border-[1px] border-white 
+            rounded-full uppercase text-sm font-medium 
+            tracking-wider text-white bg-spotify-light hover:scale-[1.05]"
                 >
                   {" "}
                   upgrade
@@ -178,7 +178,7 @@ const Home = () => {
                 <button
                   className="flex relative items-center 
           bg-spotify-light text-white
-            px-[10px] py-[5px] rounded-full"
+            px-[10px] py-[5px] rounded-full hover:bg-opacity-80"
                 >
                   <span className="flex justify-center items-center ml-[-6px] mr-[8px] text-xl">
                     <VscAccount />
