@@ -361,7 +361,7 @@ export default function HomePage() {
         </aside>
         {/*End sidebar */}
 
-        <section className="bg-green-300 flex-1 border-2 overscroll-scroll">
+        <section className="bg-green-300 flex-1 overscroll-scroll">
           <Home />
         </section>
       </div>
