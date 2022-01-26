@@ -362,7 +362,7 @@ export default function HomePage() {
           <ul className="border-t-[1px] border-gray-700 mt-[50px] pt-[5px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-520px)]">
             {renderSidebarNavPlaylists()}
           </ul>
-          <button className="flex items-center mt-[20px] cursor-pointer text-white/75 hover:text-white px-8">
+          <button className="flex items-center mt-[12px] cursor-pointer text-white/75 hover:text-white px-8">
             <span className="w-[20px] h-[20px] flex items-center justify-center mr-4 rounded-full border-[1px] border-gray-300 ">
               <AiOutlineArrowDown />
             </span>
