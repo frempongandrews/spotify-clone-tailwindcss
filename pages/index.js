@@ -320,7 +320,7 @@ export default function HomePage() {
     return sidebarNav.playlists.map((p) => {
       return (
         <li
-          className={`py-[7px] hover:text-white cursor-default px-8 text-[0.95em] ${
+          className={`py-[7px] first:pt-0 hover:text-white cursor-default px-8 text-[0.95em] ${
             selectedSidebarPlaylist === p.title ? "text-white" : "text-white/60"
           }`}
           key={p.id}
@@ -348,18 +348,18 @@ export default function HomePage() {
         {/*sidebar */}
         <aside className="bg-black w-[232px] flex-none text-white pt-6 pb-3">
           <nav className="h-[300px]">
-            <div className="px-8">
+            <div className="px-8 mb-[30px] ">
               <SpotifyIcon />
             </div>
 
-            <ul className="mt-[40px] mb-[40px] px-8">
-              {renderTopSidebarNav()}
-            </ul>
+            <ul className="px-8">{renderTopSidebarNav()}</ul>
 
-            <ul className="px-8">{renderMidSidebarNav()}</ul>
+            <ul className="px-8 mt-[30px]">{renderMidSidebarNav()}</ul>
           </nav>
 
-          <ul className="border-t-[1px] border-gray-700 mt-[50px] pt-[5px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-520px)]">
+          <div className="translate-y-[40px] mx-auto w-[85%] bg-white/50 h-[1px]"></div>
+
+          <ul className="mt-[50px] pt-[5px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-515px)]">
             {renderSidebarNavPlaylists()}
           </ul>
           <button className="flex items-center mt-[12px] cursor-pointer text-white/75 hover:text-white px-8">
