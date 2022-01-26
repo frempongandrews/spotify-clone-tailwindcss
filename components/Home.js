@@ -170,7 +170,7 @@ const Home = ({
                 <button className="flex items-center justify-center text-white bg-spotify-light w-[35px] h-[35px] rounded-full mr-[20px]">
                   <AiOutlineLeft />
                 </button>
-                <button className="flex items-center justify-center text-white bg-spotify-light/75 w-[35px] h-[35px] rounded-full cursor-not-allowed">
+                <button className="hidden lg:flex items-center justify-center text-white bg-spotify-light/75 w-[35px] h-[35px] rounded-full cursor-not-allowed">
                   <AiOutlineRight />
                 </button>
               </div>
@@ -178,17 +178,27 @@ const Home = ({
               {/* account btns container */}
               <div className="flex items-center relative">
                 <button
-                  className="mr-[40px] py-[8px]
-            px-[35px] border-[1px] border-white 
-            rounded-full uppercase text-sm font-medium 
-            tracking-wider text-white bg-spotify-light hover:scale-[1.05]"
+                  className="hidden lg:flex mr-[40px] py-[8px] px-[35px] border-[1px] border-white 
+                            rounded-full uppercase text-sm font-medium 
+                            tracking-wider text-white bg-spotify-light hover:scale-[1.05]"
                 >
                   {" "}
                   upgrade
                 </button>
                 <button
-                  className="flex relative items-center bg-spotify-light text-white
-                            px-[10px] py-[5px] rounded-full hover:bg-opacity-80"
+                  className="flex lg:hidden text-white/75 text-3xl"
+                  onClick={
+                    isAccountDropdownOpened
+                      ? closeAccountDropdown
+                      : openAccountDropdown
+                  }
+                  ref={ref}
+                >
+                  <VscAccount />
+                </button>
+                <button
+                  className="hidden lg:flex relative items-center bg-spotify-light text-white
+                            px-[10px] py-[5px] rounded-full hover:bg-opacity-80 "
                   onClick={
                     isAccountDropdownOpened
                       ? closeAccountDropdown

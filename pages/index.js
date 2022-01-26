@@ -7,6 +7,7 @@ import {
   AiFillHeart,
   AiOutlineArrowDown,
 } from "react-icons/ai";
+import { FiSearch } from "react-icons/fi";
 import { MdHomeFilled } from "react-icons/md";
 import { BiLibrary } from "react-icons/bi";
 import Home from "../components/Home";
@@ -203,7 +204,7 @@ export default function HomePage() {
           break;
 
         case "Search":
-          icon = <AiOutlineSearch />;
+          icon = <FiSearch />;
           break;
 
         case "Your Library":
@@ -228,7 +229,7 @@ export default function HomePage() {
                   <AiFillHome />{" "}
                 </span> */}
           <span className="mr-4 text-[25px]">{icon}</span>
-          <span className="text-sm">{navItem.name}</span>
+          <span className="text-[0.85em]">{navItem.name}</span>
         </li>
       );
     });
@@ -301,7 +302,7 @@ export default function HomePage() {
           className={`flex items-center mb-4 cursor-pointer hover:opacity-100 font-bold ${
             selectedSidebarNavItem === navItem.name
               ? "text-white"
-              : "opacity-75"
+              : "opacity-60"
           }`}
           onClick={() => selectSidebarNavMenuItem(navItem)}
         >
@@ -309,7 +310,7 @@ export default function HomePage() {
                   <AiFillHome />{" "}
                 </span> */}
           <span className="mr-4">{icon}</span>
-          <span className="text-sm">{navItem.name}</span>
+          <span className="text-xs">{navItem.name}</span>
         </li>
       );
     });
@@ -319,8 +320,8 @@ export default function HomePage() {
     return sidebarNav.playlists.map((p) => {
       return (
         <li
-          className={`py-[5px] hover:text-white cursor-default px-8 ${
-            selectedSidebarPlaylist === p.title ? "text-white" : "text-white/75"
+          className={`py-[7px] hover:text-white cursor-default px-8 text-[0.95em] ${
+            selectedSidebarPlaylist === p.title ? "text-white" : "text-white/60"
           }`}
           key={p.id}
           onClick={() => onSelectSidebarPlaylist(p)}
@@ -358,14 +359,14 @@ export default function HomePage() {
             <ul className="px-8">{renderMidSidebarNav()}</ul>
           </nav>
 
-          <ul className="border-t-[1px] border-gray-700 mt-[60px] pt-[15px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-545px)]">
+          <ul className="border-t-[1px] border-gray-700 mt-[50px] pt-[5px] text-white/75 text-sm overflow-y-scroll max-h-[calc(100vh-520px)]">
             {renderSidebarNavPlaylists()}
           </ul>
-          <button className="flex items-center mt-[25px] cursor-pointer text-white/75 hover:text-white px-8">
+          <button className="flex items-center mt-[20px] cursor-pointer text-white/75 hover:text-white px-8">
             <span className="w-[20px] h-[20px] flex items-center justify-center mr-4 rounded-full border-[1px] border-gray-300 ">
               <AiOutlineArrowDown />
             </span>
-            <p className="text-sm">Install App</p>
+            <p className="text-xs">Install App</p>
           </button>
         </aside>
         {/*End sidebar */}
