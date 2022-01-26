@@ -179,6 +179,15 @@ const sidebarNav = {
 export default function HomePage() {
   const [selectedSidebarNavItem, setSelectedSidebarNavItem] = useState("Home");
   const [selectedSidebarPlaylist, setSelectedSidebarPlaylist] = useState("");
+  const [isAccountDropdownOpened, setIsAccountDropdownOpened] = useState(false);
+
+  const openAccountDropdown = () => {
+    setIsAccountDropdownOpened(true);
+  };
+
+  const closeAccountDropdown = () => {
+    setIsAccountDropdownOpened(false);
+  };
 
   const renderTopSidebarNav = () => {
     return sidebarNav.topNav.map((navItem) => {
@@ -362,7 +371,11 @@ export default function HomePage() {
         {/*End sidebar */}
 
         <section className="bg-green-300 flex-1 overscroll-scroll">
-          <Home />
+          <Home
+            openAccountDropdown={openAccountDropdown}
+            closeAccountDropdown={closeAccountDropdown}
+            isAccountDropdownOpened={isAccountDropdownOpened}
+          />
         </section>
       </div>
       {/* End inner container: sidebar + content */}

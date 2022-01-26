@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDetectClickOutside } from "react-detect-click-outside";
+import PropTypes from "prop-types";
 import { VscAccount } from "react-icons/vsc";
 import { AiFillCaretDown, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
@@ -85,13 +87,20 @@ const content = {
 };
 
 // TODO: transition gradient on hover playlist
-const Home = () => {
+const Home = ({
+  openAccountDropdown,
+  closeAccountDropdown,
+  isAccountDropdownOpened,
+}) => {
   const size = useWindowSize();
+
   const [hoveredPlaylist, setHoveredPlaylist] = useState(
     content.yourPlaylists[0] || null
   );
 
-  const [isAccountDropdownOpened, toggleAccountDropdown] = useState(false);
+  const ref = useDetectClickOutside({
+    onTriggered: closeAccountDropdown,
+  });
 
   const onHoveredPlaylist = (playlist) => {
     setHoveredPlaylist(playlist);
@@ -178,9 +187,14 @@ const Home = () => {
                   upgrade
                 </button>
                 <button
-                  className="flex relative items-center 
-          bg-spotify-light text-white
-            px-[10px] py-[5px] rounded-full hover:bg-opacity-80"
+                  className="flex relative items-center bg-spotify-light text-white
+                            px-[10px] py-[5px] rounded-full hover:bg-opacity-80"
+                  onClick={
+                    isAccountDropdownOpened
+                      ? closeAccountDropdown
+                      : openAccountDropdown
+                  }
+                  ref={ref}
                 >
                   <span className="flex justify-center items-center ml-[-6px] mr-[8px] text-xl">
                     <VscAccount />
@@ -191,30 +205,32 @@ const Home = () => {
                   </span>
                 </button>
                 {/* account dropdown */}
-                <div className="absolute right-0 top-[42px] bg-spotify-medium-gray z-50 w-[200px] text-white/75 p-[5px] rounded-md">
-                  <ul className="text-[0.87em]">
-                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
-                      <span className="flex-1">Account</span>
-                      <span className="text-[1.2em]">
-                        {" "}
-                        <FiExternalLink />
-                      </span>
-                    </li>
-                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
-                      <span>Profile</span>
-                    </li>
-                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
-                      <span className="flex-1">Upgrade to Premium</span>
-                      <span className="text-[1.2em]">
-                        {" "}
-                        <FiExternalLink />
-                      </span>
-                    </li>
-                    <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
-                      <span>Log out</span>
-                    </li>
-                  </ul>
-                </div>
+                {isAccountDropdownOpened && (
+                  <div className="absolute right-0 top-[42px] bg-spotify-medium-gray z-50 w-[200px] text-white/75 p-[5px] rounded-md">
+                    <ul className="text-[0.87em]">
+                      <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
+                        <span className="flex-1">Account</span>
+                        <span className="text-[1.2em]">
+                          {" "}
+                          <FiExternalLink />
+                        </span>
+                      </li>
+                      <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
+                        <span>Profile</span>
+                      </li>
+                      <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default flex items-center hover:text-white">
+                        <span className="flex-1">Upgrade to Premium</span>
+                        <span className="text-[1.2em]">
+                          {" "}
+                          <FiExternalLink />
+                        </span>
+                      </li>
+                      <li className="py-[9px] px-[10px] hover:bg-white/[0.2] cursor-default hover:text-white">
+                        <span>Log out</span>
+                      </li>
+                    </ul>
+                  </div>
+                )}
                 {/* End account dropdown */}
               </div>
               {/* End account btns container */}
@@ -222,9 +238,9 @@ const Home = () => {
             {/* sub header*/}
             <div className="">
               <h1 className="mt-[40px] text-white text-3xl font-bold relative">
-                <h2 className="absolute right-[0%]">
+                <span className="absolute right-[0%]">
                   {JSON.stringify(size, null, 3)}
-                </h2>
+                </span>
                 Good morning:
               </h1>
               {/*playlists container */}
@@ -290,6 +306,12 @@ const Home = () => {
       {/* End content*/}
     </div>
   );
+};
+
+Home.propTypes = {
+  openAccountDropdown: PropTypes.func.isRequired,
+  closeAccountDropdown: PropTypes.func.isRequired,
+  isAccountDropdownOpened: PropTypes.bool.isRequired,
 };
 
 export default Home;
