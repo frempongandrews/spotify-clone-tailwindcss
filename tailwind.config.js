@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "spotify-green": "#1DB954",
+        "spotify-green-base": "#1ed760",
         "spotify-dark": "#121212",
         "spotify-darkest": "#191414",
         "spotify-light": "#282828",
@@ -34,5 +34,10 @@ module.exports = {
       proximaNova: ["Proxima Nova", "sans serif"],
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      display: ["group-hover"],
+    },
+  },
+  plugins: [require("@tailwindcss/line-clamp")],
 };

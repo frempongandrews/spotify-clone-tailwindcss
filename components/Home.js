@@ -3,6 +3,7 @@ import { useDetectClickOutside } from "react-detect-click-outside";
 import PropTypes from "prop-types";
 import { VscAccount } from "react-icons/vsc";
 import { AiFillCaretDown, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { IoMdPlay } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi";
 import useWindowSize from "../hooks/useWindowSize";
 
@@ -114,7 +115,7 @@ const Home = ({
       return (
         <div
           className="flex items-center h-[80px] bg-white/[.1] hover:bg-white/[.2] transition ease-in-out 
-          w-[98%] md:w-[46%] lg:w-[47%] xl:w-[31%] 2xl:w-[23%] cursor-pointer rounded-lg"
+          w-[98%] md:w-[46%] lg:w-[47%] xl:w-[31%] 2xl:w-[23%] cursor-pointer rounded-lg group"
           key={p.title}
           onMouseEnter={() => onHoveredPlaylist(p)}
           onMouseLeave={() => onLeaveHoveredPlaylist(p)}
@@ -122,8 +123,16 @@ const Home = ({
           <div className="w-[80px]">
             <img src={p.img} className="rounded-l-lg" width="100%" />
           </div>
-          <div className="flex items-center p-[20px] text-white font-bold">
-            <p>{p.title}</p>
+          <div className="flex items-center p-[20px] text-white font-bold flex-1 ">
+            <p className="line-clamp-2">{p.title}</p>
+          </div>
+
+          <div
+            className=" flex items-center justify-center opacity-0 
+                            group-hover:opacity-100 w-[44px] h-[44px] bg-spotify-green-base 
+                            rounded-full mr-[10px] transition-all duration-300"
+          >
+            <IoMdPlay />
           </div>
         </div>
       );
@@ -136,7 +145,7 @@ const Home = ({
         <div
           className="xs:min-w-[180px] max-w-[300px] md:min-w-[200px] lg:max-w-[320px]
           flex-1 flex justify-center mb-[100px] bg-spotify-black border-[1px] cursor-pointer
-          border-spotify-black rounded-lg"
+          border-spotify-black rounded-lg hover:bg-white/[.06] transition-all duration-300"
           key={s.title}
         >
           <div className=" p-4">
