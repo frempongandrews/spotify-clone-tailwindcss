@@ -196,8 +196,9 @@ const Home = ({
                   upgrade
                 </button>
                 <button
-                  className="flex relative items-center bg-spotify-light text-white
-                            px-[10px] py-[5px] rounded-full hover:bg-opacity-80"
+                  className="flex relative items-center text-white 
+                  px-[10px] py-[5px] rounded-full hover:bg-opacity-80 
+                  lg:bg-spotify-light"
                   onClick={
                     isAccountDropdownOpened
                       ? closeAccountDropdown
@@ -205,11 +206,13 @@ const Home = ({
                   }
                   ref={ref}
                 >
-                  <span className="flex justify-center items-center ml-[-6px] mr-[8px] text-xl">
+                  <span className="flex justify-center items-center ml-[-6px] mr-[8px] text-3xl lg:text-xl ">
                     <VscAccount />
                   </span>
-                  <span className="mr-[5px] text-sm text-center">Andrews</span>
-                  <span className="text-xs flex mr-[0px]">
+                  <span className="mr-[5px] text-sm text-center hidden lg:flex">
+                    Andrews
+                  </span>
+                  <span className="text-xs mr-[0px] hidden lg:flex">
                     <AiFillCaretDown />
                   </span>
                 </button>
