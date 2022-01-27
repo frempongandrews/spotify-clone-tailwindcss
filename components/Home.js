@@ -153,7 +153,7 @@ const Home = ({
               <img src={s.img} className="rounded-xl " />
             </div>
             <div className="text-white">
-              <p className="mt-[14px] mb-[4px]">{s.title}</p>
+              <p className="mt-[14px] mb-[4px] line-clamp-1">{s.title}</p>
               <p className="text-white/60 leading-tight text-sm line-clamp-2">
                 {s.producer}
               </p>
