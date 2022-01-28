@@ -381,8 +381,33 @@ export default function HomePage() {
       </div>
       {/* End inner container: sidebar + content */}
       {/* Player */}
-      <div className="relative h-[100px] bg-spotify-dark text-white">
-        player
+      <div className="flex items-center relative h-[100px] bg-spotify-dark text-white py-[10px] px-[20px]">
+        {/* song details */}
+        <div className="flex flex-1 bg-indigo-900 w-[30%]">
+          <div className="min-w-[60px] min-h-[60px] rounded-md border-[1px] border-red-700">
+            image
+          </div>
+          <div className="flex flex-1 relative w-full bg-cyan-500 items-center justify-between overflow-hidden">
+            <div className="flex flex-col justify-center pl-3 bg-indigo-500">
+              <h3 className="text-sm overflow-x-hidden w-[100%] min-w-[60px] max-w-[250px] whitespace-nowrap">
+                Title of some Title of some Title of some Title of some
+              </h3>
+              <p className="text-xs">An artist</p>
+            </div>
+
+            <div className="flex items-center bg-violet-800 min-w-[80px] h-[80px] absolute right-0">
+              <span>icon </span>
+              <span> icon</span>
+            </div>
+          </div>
+        </div>
+        {/* End song details */}
+
+        <div className="flex items-center bg-fuchsia-600 w-[60%] min-w-[350px] h-full ">
+          player
+        </div>
+
+        <div className="bg-rose-900 w-[15%] min-w-[250px]">volume</div>
       </div>
       {/*End Player */}
     </div>
