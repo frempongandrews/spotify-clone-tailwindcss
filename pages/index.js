@@ -13,6 +13,14 @@ import { MdHomeFilled } from "react-icons/md";
 import { BiLibrary } from "react-icons/bi";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import Home from "../components/Home";
+import {
+  Reverse15SecsIcon,
+  Forward15SecsIcon,
+  PlayIcon,
+  BackIcon,
+  ForwardIcon,
+} from "../components/Icons";
+
 const SpotifyIcon = () => {
   return (
     <svg className="spotify-logo--text h-[40px]" viewBox="0 0 1134 340">
@@ -399,20 +407,20 @@ export default function HomePage() {
       {/* Player */}
       <div className="flex items-center relative h-[100px] bg-spotify-dark text-white py-[10px] px-[20px]">
         {/* song details */}
-        <div className="flex flex-1 bg-indigo-900 w-[35%]">
+        <div className="flex flex-1 w-[35%]">
           <div className="min-w-[60px] min-h-[60px] rounded-md border-[1px] border-red-700">
             <img src="/images/nkki.jpeg" width="60px" />
           </div>
-          <div className="flex flex-1 relative w-full bg-cyan-500 items-center justify-between overflow-hidden">
-            <div className="flex flex-col justify-center pl-3 bg-indigo-500">
+          <div className="flex flex-1 relative w-full items-center justify-between overflow-hidden">
+            <div className="flex flex-col justify-center pl-3">
               <h3 className="text-sm overflow-x-hidden w-[100%] min-w-[60px] max-w-[250px] whitespace-nowrap">
                 #167 No is a sentence
               </h3>
               <p className="text-xs">The Nikki Glaser Podcast</p>
             </div>
 
-            <div className="flex items-center space-x-3 bg-violet-800 min-w-[80px] h-[80px] absolute right-0">
-              <span className="flex items-center  justify-center w-[14px] h-[14px] bg-spotify-green-base rounded-full ">
+            <div className="flex items-center min-w-[80px] h-[80px] absolute right-0 z-50 bg-spotify-dark transparent-gradient">
+              <span className="flex items-center justify-center w-[14px] h-[14px] mx-[20px] bg-spotify-green-base rounded-full ">
                 <AiOutlineCheck
                   text-black
                   font-extrabold
@@ -428,17 +436,27 @@ export default function HomePage() {
         </div>
         {/* End song details */}
 
-        <div className="flex items-center bg-fuchsia-600 w-[55%] min-w-[350px] h-full relative">
-          <div className="bg-spotify-green-base space-x-4 w-[70%] ml-[60px] mb-[20px] flex justify-center">
-            <button>icon</button>
-            <button>icon</button>
-            <button>icon</button>
-            <button>icon</button>
-            <button>icon</button>
+        <div className="flex items-center w-[55%] min-w-[350px] h-full relative group">
+          <div className="w-[70%] ml-[60px] mb-[40px] flex justify-center">
+            <button>
+              <Reverse15SecsIcon />
+            </button>
+            <button className="ml-[40px]">
+              <BackIcon />
+            </button>
+            <button className="flex justify-center items-center mx-[20px] w-[40px] h-[40px] bg-white rounded-full">
+              <PlayIcon className="" />
+            </button>
+            <button className="mr-[40px]">
+              <ForwardIcon />
+            </button>
+            <button>
+              <Forward15SecsIcon />
+            </button>
           </div>
           {/*progress */}
           <div className="w-full px-[60px] absolute bottom-0">
-            <div className="h-[6px] rounded-full bg-rose-700 w-[70%] absolute bottom-4">
+            <div className="h-[6px] rounded-full bg-spotify-lightest w-[70%] absolute bottom-4">
               <span className="absolute left-[-40px] bottom-[-4px] text-xs">
                 0:20
               </span>{" "}
@@ -446,8 +464,8 @@ export default function HomePage() {
                 1:14:44
               </span>
             </div>
-            <div className="absolute bottom-4 bg-spotify-green-base h-[6px] w-[50%]">
-              <span className="absolute w-[12px] h-[12px] bg-white right-0 bottom-[-3px] rounded-full"></span>
+            <div className="absolute bottom-4 bg-white/90 h-[6px] w-[50%] rounded-full">
+              <span className="opacity-0 group-hover:opacity-100 absolute w-[12px] h-[12px] bg-white right-0 bottom-[-3px] rounded-full"></span>
             </div>
           </div>
           {/*end progress */}
