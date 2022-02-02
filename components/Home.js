@@ -251,7 +251,7 @@ const Home = ({
             <div className="">
               <h1 className="mt-[40px] text-white text-3xl font-bold relative">
                 <span className="absolute right-[0%]">
-                  {JSON.stringify(size, null, 3)}
+                  {/* {JSON.stringify(size, null, 3)} */}
                 </span>
                 Good morning:
               </h1>

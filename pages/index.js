@@ -19,6 +19,9 @@ import {
   PlayIcon,
   BackIcon,
   ForwardIcon,
+  QueuedSongsIcon,
+  PlayDeviceIcon,
+  VolumeIcon,
 } from "../components/Icons";
 
 const SpotifyIcon = () => {
@@ -455,8 +458,8 @@ export default function HomePage() {
             </button>
           </div>
           {/*progress */}
-          <div className="w-full px-[60px] absolute bottom-0">
-            <div className="h-[6px] rounded-full bg-spotify-lightest w-[70%] absolute bottom-4">
+          <div className="w-full px-[60px] group absolute bottom-0">
+            <div className="h-[4px] rounded-full bg-spotify-lightest w-[70%] absolute bottom-4">
               <span className="absolute left-[-40px] bottom-[-4px] text-xs">
                 0:20
               </span>{" "}
@@ -464,14 +467,34 @@ export default function HomePage() {
                 1:14:44
               </span>
             </div>
-            <div className="absolute bottom-4 bg-white/90 h-[6px] w-[50%] rounded-full">
+            <div className="absolute bottom-4 bg-white/90 h-[4px] w-[50%] rounded-full group-hover:bg-spotify-green-base">
               <span className="opacity-0 group-hover:opacity-100 absolute w-[12px] h-[12px] bg-white right-0 bottom-[-3px] rounded-full"></span>
             </div>
           </div>
           {/*end progress */}
         </div>
 
-        <div className="bg-rose-900 w-[15%] min-w-[250px]">volume</div>
+        <div className=" w-[15%] min-w-[250px] flex items-center justify-end">
+          <span>
+            <QueuedSongsIcon />
+          </span>
+          <span className="ml-3">
+            <PlayDeviceIcon />
+          </span>
+          {/* volume */}
+          <div className="flex ml-3">
+            <span className="relative ml-[0px] mr-2">
+              <VolumeIcon />
+            </span>
+            <div className="w-[100px] relative flex group">
+              <div className="h-[4px] rounded-full bg-spotify-lightest w-[70%] absolute bottom-[6px]"></div>
+              <div className="absolute bottom-[6px] bg-white/90 h-[4px] w-[50%] rounded-full group-hover:bg-spotify-green-base">
+                <span className="opacity-0 group-hover:opacity-100 absolute w-[12px] h-[12px] bg-white right-0 bottom-[-3px] rounded-full"></span>
+              </div>
+            </div>
+          </div>
+          {/* End volume */}
+        </div>
       </div>
       {/*End Player */}
     </div>
