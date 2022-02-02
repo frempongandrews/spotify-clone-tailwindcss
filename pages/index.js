@@ -411,7 +411,7 @@ export default function HomePage() {
       <div className="flex items-center relative h-[100px] bg-spotify-dark text-white py-[10px] px-[20px]">
         {/* song details */}
         <div className="flex flex-1 w-[35%]">
-          <div className="min-w-[60px] min-h-[60px] rounded-md border-[1px] border-red-700">
+          <div className="min-w-[60px] min-h-[60px] rounded-md">
             <img src="/images/nkki.jpeg" width="60px" />
           </div>
           <div className="flex flex-1 relative w-full items-center justify-between overflow-hidden">
